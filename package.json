@@ -2,7 +2,7 @@
   "name": "tree-sitter-todo",
   "version": "1.0.0",
   "description": "tree sitter for my particular todo formatting",
-  "main": "index.js",
+  "main": "bindings/node",
   "types": "bindings/node",
   "scripts": {
     "generate": "tree-sitter generate",
@@ -30,9 +30,7 @@
   "bugs": {
     "url": "https://github.com/jimmykodes/tree-sitter-todo/issues"
   },
-  "homepage": "https://github.com/jimmykodes/tree-sitter-todo#readme",
   "dependencies": {
-    "tree-sitter-cli": "^0.22.2",
     "node-addon-api": "^7.1.0",
     "node-gyp-build": "^4.8.0"
   },
@@ -45,8 +43,10 @@
     }
   },
   "devDependencies": {
+    "tree-sitter-cli": "^0.20.8",
     "prebuildify": "^6.0.0"
   },
+  "homepage": "https://github.com/jimmykodes/tree-sitter-todo#readme",
   "tree-sitter": [
     {
       "scope": "source.todo",
