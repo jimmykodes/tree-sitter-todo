@@ -1,5 +1,6 @@
 (header) @variable
 
-(item) @text
+(bullet) @punctuation
+(content) @string
 (project) @constant
-(tag) @comment
+(tag) @tag

@@ -72,6 +72,26 @@
       "type": "STRING",
       "value": "-"
     },
+    "content": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "[\\w]+"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "project"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "tag"
+          }
+        ]
+      }
+    },
     "item": {
       "type": "SEQ",
       "members": [
@@ -80,24 +100,8 @@
           "name": "bullet"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": "[\\w]+"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "project"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "tag"
-              }
-            ]
-          }
+          "type": "SYMBOL",
+          "name": "content"
         }
       ]
     },
@@ -118,4 +122,3 @@
   "inline": [],
   "supertypes": []
 }
-
