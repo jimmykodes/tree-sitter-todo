@@ -1,0 +1,63 @@
+{
+  "name": "tree-sitter-todo",
+  "version": "1.0.0",
+  "description": "tree sitter for my particular todo formatting",
+  "main": "index.js",
+  "types": "bindings/node",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmykodes/tree-sitter-todo.git"
+  },
+  "keywords": [
+    "tree-sitter"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "author": "jimmykodes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimmykodes/tree-sitter-todo/issues"
+  },
+  "homepage": "https://github.com/jimmykodes/tree-sitter-todo#readme",
+  "dependencies": {
+    "tree-sitter-cli": "^0.22.2",
+    "node-addon-api": "^7.1.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "prebuildify": "^6.0.0"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.todo",
+      "file-types": [
+        ".td",
+        ".todo"
+      ],
+      "first-line-regex": "#!.*\\btodo$",
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    }
+  ]
+}
